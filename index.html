@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- TODO: edit these for your own site (also see src/content/profile.ts) -->
+    <meta name="description" content="Personal site of [Your Name] - what you do, in one line." />
+    <title>[Your Name]</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="[Your Name]" />
+    <meta property="og:title" content="[Your Name]" />
+    <meta property="og:description" content="What you do, in one line." />
+
+    <!-- Fonts: Archivo (display), Schibsted Grotesk (body), Martian Mono (labels). Swap here + in src/index.css. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Schibsted+Grotesk:wght@400..900&family=Martian+Mono:wght@300..800&display=swap" rel="stylesheet" />
+
+    <!-- Set the theme before paint so there's no flash. Reads the visitor's saved choice, else their OS preference. -->
+    <script>
+      (function () {
+        var saved = null;
+        try { saved = localStorage.getItem('theme'); } catch (e) {}
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

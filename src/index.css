@@ -1,0 +1,124 @@
+@import "tailwindcss";
+@import "@abyssal/design-system/styles";
+
+/* ── Static tokens (don't change with theme) ───────────────────────
+   Brand accent ramps. Swap these hex values to re-skin the whole site.
+   The light/dark surface colors live in packages/abyssal/src/abyssal.css. */
+@theme {
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+
+  /* Fonts. Change these three lines + the <link> in index.html to swap typefaces. */
+  --font-sans: 'Schibsted Grotesk', system-ui, sans-serif;
+  --font-display: 'Archivo', system-ui, sans-serif;
+  --font-mono: 'Martian Mono', monospace;
+
+  --animate-fade-in: fade-in 0.5s ease-in-out;
+  --animate-slide-up: slide-up 0.3s ease-out;
+
+  @keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes slide-up {
+    0% { transform: translateY(10px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+}
+
+/* ── Body font ─────────────────────────────────────────────────── */
+body {
+  font-family: var(--font-sans);
+  font-feature-settings: "rlig" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Skip link: hidden until keyboard focus ────────────────────── */
+.skip-link {
+  position: fixed; top: 8px; left: 8px; z-index: 100;
+  transform: translateY(-200%);
+  background: var(--cyan); color: var(--bg);
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 8px 12px; border-radius: 6px;
+  transition: transform 0.15s ease-out;
+}
+.skip-link:focus-visible { transform: translateY(0); }
+
+/* ── Display type: Archivo Expanded for page-level headings ────── */
+.display-type {
+  font-family: var(--font-display);
+  font-stretch: 125%;
+  font-variation-settings: 'wdth' 125;
+  letter-spacing: -0.005em;
+}
+
+/* ── Small uppercase mono labels (eyebrows, kickers) ───────────── */
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+/* ── Buttons ───────────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  background: var(--cyan);
+  color: var(--bg);
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: filter 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+.btn-primary:hover { filter: brightness(1.08); transform: translateY(-1px); }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 0.65rem 1.25rem;
+  color: var(--text);
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: background 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+.btn-ghost:hover {
+  background: var(--card-hover);
+  border-color: var(--border-bright);
+}
+
+/* ── Page layout ───────────────────────────────────────────────── */
+.page-container { max-width: 1100px; margin: 0 auto; padding: 2rem; position: relative; z-index: 2; }
+.page-header { text-align: left; margin-bottom: 3rem; }
+.page-header h1 {
+  font-family: var(--font-display);
+  font-stretch: 125%;
+  font-variation-settings: 'wdth' 125;
+  letter-spacing: -0.005em;
+  font-size: 2.25rem; font-weight: 800; margin: 0 0 0.5rem 0;
+  color: var(--text);
+}
+.page-header .subtitle { font-size: 1.1rem; color: var(--muted); margin: 0; }
+.page-footer { text-align: center; padding: 2rem 0; margin-top: 3rem; color: var(--dim); border-top: 1px solid var(--border); }
+
+/* ── Responsive ────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .page-container { padding: 1rem; }
+  .page-header h1 { font-size: 2rem; }
+}
