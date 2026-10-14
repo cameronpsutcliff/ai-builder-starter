@@ -1,73 +1,91 @@
-# Instructions for Claude (or any AI agent)
+# Instructions for Claude (or any AI coding agent)
 
-You are helping the owner of this repo turn a **portfolio starter template** into
-**their own personal website**. The design, fonts, theme, and layout are done.
-Your job is to replace placeholder content with the owner's real content, then
-verify the site still builds and looks right.
+You are helping the owner of this repo build **their own personal website (`firstnamelastname.com`)** AND experience the **"Aha!" moment** of collaborating with an AI agent to brainstorm, design, and build something interactive that lives on their site.
 
-## What this project is
+Treat this as a creative collaboration. Your job has three core goals:
+- **A) Get the site on:** Make sure the site is running locally right away (`http://localhost:5173`) so the owner can watch every change happen live in their browser as you talk, and help them deploy it when ready.
+- **B) Shape their personal brand (`firstnamelastname.com`):** Brainstorm with the owner on what they want their corner of the internet to be, what content to host, and how to express who they are in their own voice.
+- **C) Create the AI "Aha!" moment:** Instruct the owner to think about things they are passionate about (hobbies, obsessions, side quests, daily curiosities), brainstorm project ideas around those passions, and **co-build a working interactive tool or mini-app hosted right on their site**.
 
-A small React + Vite + TypeScript single-page site with a light/dark theme, an
-animated particle background, three Google Fonts, and a clean component shell.
-All of the owner's *content* lives in plain data files, not in code.
+---
 
-## Start here - the only two files most people need to edit
+## Architecture overview (simple by design)
 
-1. **`src/content/profile.ts`** - name, tagline, intro, About text, skills, social links.
-2. **`src/content/projects.ts`** - one entry per project. Add, remove, reorder freely.
+This is a clean React + Vite + TypeScript static site with light/dark mode (`packages/abyssal/`), smooth animations, and two ways to add content:
 
-Editing those two files updates the home page, the About page, the Work grid, and
-every project detail page automatically. **Do not rebuild the components to add
-content; just edit the data.**
+1. **Plain data files (`src/content/`):**
+   - `src/content/profile.ts`: Name, `firstnamelastname.com` domain label, location, tagline, intro, 3 personal brand pillars, a "Focused on right now" (`now`) list, About paragraphs, passions/hobbies, skills, and social links. Also holds `starterMode: boolean` (which controls the on-screen Starter Launchpad banner).
+   - `src/content/projects.ts`: Entries for projects, deep dives, essays, or live interactive tools. Each entry automatically gets a card on the Home/Work grid and a detail page at `/work/:slug`.
+2. **Interactive Lab components (`src/lab/`):**
+   - Any React component created in `src/lab/` and registered in `src/lab/registry.tsx` can be embedded directly into a project page by setting `interactiveId: 'your-key'` on that project in `src/content/projects.ts`.
+   - Out of the box, `src/lab/PassionSparkDemo.tsx` is wired into the first project (`/work/passion-project-lab`) as a working example.
 
-## Your workflow
+---
 
-1. **Interview the owner first.** Ask for: their name, a one-line tagline, a short
-   intro, 1-3 projects (title, what it was, what they did, a link if any), their
-   skills, and their social links (email, GitHub, LinkedIn, X, Instagram, website).
-   Ask in small batches; don't demand everything at once.
-2. **Fill in `profile.ts` and `projects.ts`** with their answers. Keep the writing
-   in *their* voice - concrete and human, not marketing fluff.
-3. **Update `index.html`**: the `<title>`, the `description` meta, and the Open
-   Graph (`og:*`) tags - replace `[Your Name]` everywhere.
-4. **Swap the favicon** (`public/favicon.svg`): change the `JS` initials, or replace
-   the file with the owner's own mark.
-5. **Run it and check** (see below). Fix anything that breaks. Show the owner.
+## Your 4-stage workflow with the owner
 
-## Running and verifying (do this - don't ask the owner to)
+Keep your tone warm, direct, and energizing. Ask **2 to 3 questions at a time** so the conversation feels like a creative jam session rather than a long intake form.
 
-```bash
-npm install        # first time only
-npm run dev        # local dev server, hot-reloads as you edit
-npm run build      # MUST pass before you call the work done (runs tsc + vite build)
-```
+### Stage 1: Get the site on their screen (Goal A)
+1. Check if `node_modules` exists. If not, run `npm install`.
+2. Start the dev server (`npm run dev`) or give the owner the command so they can open `http://localhost:5173` right away.
+3. Tell them to keep the browser open side-by-side with your chat so they can watch the site transform live as you work together.
 
-`npm run build` is the gate. If it fails, read the error, fix it, run again.
-Common cause: a typo in `profile.ts` / `projects.ts` (a missing comma or quote).
+### Stage 2: Brainstorm the site vision & personal brand (Goal B)
+Before filling in files, help the owner think through what they want their `firstnamelastname.com` site to be:
+1. **Ask about their vision & identity:**
+   - What is their name, location (if they want it shown), and the domain name they have in mind (e.g., `firstnamelastname.com`)?
+   - When someone looks them up and lands on this page, what is the main impression they want to leave?
+   - What kind of content do they want to host here? (e.g., work highlights, interactive tools they build, notes/essays on topics they care about, favorite gear/book recommendations, a "/now" list of current goals).
+2. **Ask about their story & current focus:**
+   - What do they do day-to-day, and what kinds of problems do they enjoy solving?
+   - What are 2 or 3 things they are focused on, learning, or excited about *right now* (for the `now` section)?
+   - What social or contact links (`email`, `github`, `linkedin`, `x`, `instagram`, `website`) do they want included?
+3. **Update the site live:**
+   - Write their answers into `src/content/profile.ts` in *their* natural voice (concrete, human, zero resume cliches).
+   - Update `<title>`, meta description, and Open Graph tags in `index.html`.
+   - Update the initials in `public/favicon.svg`.
+   - Tell the owner to look at their browser and ask how the home and About pages feel so far.
 
-## Going further (only if the owner asks)
+### Stage 3: The Passion Brainstorm & Live Build (Goal C - Do NOT skip!)
+Once the personal brand pages look great, proactively kick off Stage 3. Many people do not realize an AI agent can invent and build real software with them until they experience it firsthand.
 
-- **Re-skin the colors:** brand accents are in `src/index.css` (the `--color-primary-*`
-  ramp and the `--cyan` / `--purple` accents). Light and dark *surface* colors live in
-  `packages/abyssal/src/abyssal.css`. Change values there; the whole site follows.
-- **Change fonts:** edit the `<link>` in `index.html` AND the `--font-*` lines in
-  `src/index.css`. Keep both in sync.
-- **Add a new page:** create a file in `src/pages/`, then add a `<Route>` for it in
-  `src/App.tsx` and a nav link in `src/components/SiteHeader.tsx`.
-- **Add a new content type** (e.g. writing/blog): copy the pattern in
-  `src/content/projects.ts` + `src/pages/Work.tsx` - a data file plus a page that maps over it.
+1. **Direct the owner to think about their passions:**
+   Say something like:
+   > *"Now for the best part. Because your site runs on React, we can host real interactive tools, calculators, visualizers, or mini-apps right inside it. Forget resumes for a minute: what are 2 or 3 things you nerd out on in real life? Think hobbies, sports, cooking, coffee, lifting, music, gaming, personal finance, outdoor gear, or even an annoying calculation you do by hand."*
+2. **Brainstorm 3 concrete interactive project ideas:**
+   - Take whatever passions or curiosities the owner shares and pitch **3 specific, fun, bite-sized interactive builds** you can create together in a few minutes.
+   - Good formats: an interactive calculator or dialer, a visual scenario comparator, a custom planner/generator, an interactive pace/split/ratio chart, or a mini quiz/explorer.
+   - Also ask if they have 1 or 2 existing real-world projects, case studies, or deep-dive topics they want featured alongside the interactive build in `src/content/projects.ts`.
+3. **Collaborate to build and host their favorite idea:**
+   - Once the owner picks an idea, build a polished, self-contained React component in `src/lab/<ToolName>.tsx` using the site's CSS variables (`var(--bg)`, `var(--card)`, `var(--text)`, `var(--muted)`, `var(--cyan)`, `var(--border)`, `.glass`, `.btn-primary`, `.btn-ghost`, `.kicker`).
+   - Register the component in `src/lab/registry.tsx`.
+   - Add or replace an entry in `src/content/projects.ts` with `interactiveId` set to that registry key, plus a clear `title`, `summary`, `tag`, `highlights`, and `body`.
+   - Point the owner to `/work/<slug>` in their browser so they can click around and test it live!
+4. **Iterate together:**
+   - Ask the owner: *"Try it out in your browser! What should we tweak, add, or change?"*
+   - Do at least one round of collaborative refinement (adding a preset button, tweaking a formula, adjusting sliders, adding a visual breakdown) so they feel the magic of co-building with AI.
 
-## Rules
+### Stage 4: Customize the look, clean up & ship (Goal A + B)
+1. **Optional aesthetic tweaks:** Ask if they want to change the brand accent colors or fonts in `src/index.css` (and `index.html` if changing Google Fonts) or if they like the current theme.
+2. **Turn off Starter Mode:** Once their real profile and projects are in place, set `starterMode: false` in `src/content/profile.ts` so the Starter Launchpad banner disappears from the home page.
+3. **Verify the build (mandatory gate):**
+   ```bash
+   npm run build
+   ```
+   `npm run build` runs `tsc -b && vite build`. If there are any TypeScript or build errors, fix them immediately and re-run until it passes cleanly.
+4. **Guide deployment to their domain:**
+   Explain the simplest path to put their site live on the internet:
+   - Push this repo to their GitHub account.
+   - Import the repo on **Vercel** or **Netlify** (free tier, "Vite" preset, zero config needed).
+   - Connect their custom `firstnamelastname.com` domain in the Vercel/Netlify Domains tab.
 
-- Keep the data-driven pattern. Content goes in `src/content/`, never hard-coded into pages.
-- Never commit secrets. There are no API keys in this project and it doesn't need any.
-- The `packages/abyssal/` folder is the design system - you usually don't need to touch it.
-- When you're done, the site should `npm run build` cleanly and every placeholder
-  ("Your Name", "first-project", lorem text) should be gone.
+---
 
-## Deploying (when the content is ready)
+## House rules for the agent
 
-This is a static Vite app. `npm run build` outputs to `dist/`. It deploys as-is to
-Vercel, Netlify, GitHub Pages, Cloudflare Pages, or any static host. Recommend
-**Vercel** or **Netlify** to the owner - connect the GitHub repo, framework
-preset "Vite", and it ships. No server, no database, no environment variables.
+- **Run commands yourself:** Do not ask the owner to run `npm install` or `npm run build` manually when you have terminal access; run them and verify.
+- **Keep content clean:** Profile and project metadata stay in `src/content/profile.ts` and `src/content/projects.ts`. Interactive tools live in `src/lab/` and register in `src/lab/registry.tsx`.
+- **Want to add a whole new top-level page?** (e.g., `/writing`, `/uses`, `/now`, `/bookmarks`): Create the data file in `src/content/`, create the page in `src/pages/`, add the `<Route>` in `src/App.tsx`, and add the nav link in `src/components/SiteHeader.tsx`.
+- **No secrets:** This is a static frontend site. Never commit API keys or secrets.
+- **Zero placeholders at finish:** Before calling the site finished, ensure `starterMode` is `false`, `"Your Name"` is replaced everywhere (`profile.ts`, `index.html`, `favicon.svg`), and `npm run build` succeeds.
