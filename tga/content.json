@@ -1,0 +1,174 @@
+{
+  "handle": "@trashgolfassociation",
+  "posts": [
+    {
+      "id": "01-welcome",
+      "slides": [
+        { "kicker": "Est. by a 15 handicap", "headline": "Welcome to the Trash Golf Association", "body": "Golf for the rest of us." },
+        { "kicker": "Membership requirements", "headline": "You qualify if…", "body": "You've ever apologized to a tree." },
+        { "kicker": "Membership requirements", "headline": "You also qualify if…", "body": "Your best shot of the day was the one nobody saw." },
+        { "kicker": "What we do", "headline": "Fewer blow-ups. More fun.", "body": "Simple fixes, honest scorecards, and rules no pro would approve." },
+        { "kicker": "Ready?", "headline": "Membership is free.", "body": "Follow, save, and send this to the worst golfer you know (with love)." }
+      ],
+      "caption": "Welcome to the TGA. No pure strikes required. Follow along for simple fixes, honest scorecards, and the official rules of bad golf. Tag a fellow member.",
+      "hashtags": "#golf #golfmemes #golftips #highhandicap #golfer #golflife #weekendgolfer"
+    },
+    {
+      "id": "02-rulebook-vol1",
+      "slides": [
+        { "kicker": "The TGA Rulebook", "headline": "Volume 1", "body": "Five rules every member lives by." },
+        { "kicker": "Rule 1", "headline": "A shot in the trees is a new hole.", "body": "Find the opening, take your medicine, move on." },
+        { "kicker": "Rule 2", "headline": "Bogey is a good score.", "body": "Double is a fine score. Triple is a story for the clubhouse." },
+        { "kicker": "Rule 3", "headline": "The range is a lie.", "body": "Nobody has ever hit it like that on hole 1." },
+        { "kicker": "Rule 4", "headline": "Never apologize to a playing partner for a good shot.", "body": "You earned it. Probably." },
+        { "kicker": "Rule 5", "headline": "The best shot is the next one.", "body": "Save this for your next round." }
+      ],
+      "caption": "The official TGA Rulebook, Vol. 1. Which rule is your favorite? Save this for your next round.",
+      "hashtags": "#golf #golfmemes #golfhumor #highhandicap #golftok #golfers #golfcourse"
+    },
+    {
+      "id": "03-slice-reasons",
+      "slides": [
+        { "kicker": "Simple fix", "headline": "3 reasons you keep slicing", "body": "And what to try about each one." },
+        { "kicker": "Reason 1", "headline": "Your grip is too weak.", "body": "Try seeing two knuckles on your lead hand at address. It helps the face close at impact." },
+        { "kicker": "Reason 2", "headline": "Your path is out-to-in.", "body": "Picture the ball sitting inside the target line and swing out toward the right-field side of the range." },
+        { "kicker": "Reason 3", "headline": "You're swinging too hard.", "body": "Smooth 80% beats a wild 100%. Tempo fixes more than technique." },
+        { "kicker": "Try it", "headline": "Change one thing at a time.", "body": "Pick one, hit 10 balls, and see what changes. Save this for the range." }
+      ],
+      "caption": "Most slices come from the face being open to the path. Pick ONE of these to try at the range and see what happens. Which one sounds like you?",
+      "hashtags": "#golftips #golfslice #fixyourslice #golfswing #highhandicap #golflessons #golf"
+    },
+    {
+      "id": "04-bogey-good",
+      "slides": [
+        { "kicker": "Mindset", "headline": "Bogey is a good score.", "body": "Here's why." },
+        { "kicker": "The math", "headline": "Most 90s shooters make bogey or worse on every hole.", "body": "That's 18 bogeys = 90. Not a bad day." },
+        { "kicker": "The real score killer", "headline": "It's the double and triple.", "body": "One blow-up hole costs more than three good ones save." },
+        { "kicker": "The plan", "headline": "Aim for the fat part of the green.", "body": "Two-putt for bogey is a win. Pars are a bonus." },
+        { "kicker": "Remember", "headline": "Stop chasing hero shots.", "body": "Send this to someone who tries one every round." }
+      ],
+      "caption": "Golf got easier the day I started counting bogey as a win. Stop the blow-ups and the score takes care of itself.",
+      "hashtags": "#golf #golfmindset #highhandicap #breaking90 #breaking100 #golftips #courseManagement"
+    },
+    {
+      "id": "05-member-signs",
+      "slides": [
+        { "kicker": "Self-diagnosis", "headline": "5 signs you're a TGA member", "body": "Be honest." },
+        { "kicker": "Sign 1", "headline": "You own more lost-ball sleeves than clubs.", "body": "" },
+        { "kicker": "Sign 2", "headline": "You've said 'that felt good' about a shot that went 80 yards.", "body": "" },
+        { "kicker": "Sign 3", "headline": "Your swing thought changes every hole.", "body": "" },
+        { "kicker": "Sign 4", "headline": "You still enjoy it.", "body": "That's the whole point. Welcome." }
+      ],
+      "caption": "How many of these apply to you? Be honest. Comment your number.",
+      "hashtags": "#golfmemes #golfhumor #golfers #golflife #highhandicap #golf #weekendgolfer"
+    },
+    {
+      "id": "06-tee-shot-safety",
+      "slides": [
+        { "kicker": "Off the tee", "headline": "Stop losing balls off the tee", "body": "3 tiny changes that work for high handicaps." },
+        { "kicker": "Change 1", "headline": "Tee up on your miss side.", "body": "If you miss right, tee up on the right side and aim left. More fairway to work with." },
+        { "kicker": "Change 2", "headline": "Take less club.", "body": "A fairway wood or hybrid in play beats a driver in the trees." },
+        { "kicker": "Change 3", "headline": "Pick a tiny target.", "body": "A tree, a bunker edge, a cart path mark. A small target beats 'the fairway'." },
+        { "kicker": "Save it", "headline": "Play the hole backward.", "body": "Where do you want your second shot from? Start there." }
+      ],
+      "caption": "Off the tee is my biggest leak too. These three habits save me strokes every round. Save for your next round.",
+      "hashtags": "#golftips #golfdrive #highhandicap #courseManagement #golfstrategy #golfer #golf"
+    },
+    {
+      "id": "07-reset-after-blowup",
+      "slides": [
+        { "kicker": "Mindset", "headline": "How to reset after a triple bogey", "body": "The 10-second rule." },
+        { "kicker": "Step 1", "headline": "Give yourself 10 seconds.", "body": "Be mad. Sigh. Mutter. Then it's over." },
+        { "kicker": "Step 2", "headline": "Take one breath.", "body": "Slow it down. Your tempo is the first thing to go." },
+        { "kicker": "Step 3", "headline": "Pick a new target.", "body": "Forget the score. All that matters is the next tee shot." },
+        { "kicker": "Reminder", "headline": "You're playing a game.", "body": "Send this to the member who needs it today." }
+      ],
+      "caption": "Everyone blows up. The difference is how fast you reset. Try the 10-second rule next round.",
+      "hashtags": "#golfmindset #golftips #highhandicap #golfer #mentalgame #golf #golflife"
+    },
+    {
+      "id": "08-three-putts",
+      "slides": [
+        { "kicker": "Score saver", "headline": "The 3-putt is the real score killer", "body": "A simple drill to stop them." },
+        { "kicker": "The problem", "headline": "Most 3-putts are bad first putts.", "body": "Not bad second putts. Distance control is the issue." },
+        { "kicker": "The drill", "headline": "Pick a 30-foot putt.", "body": "Roll 5 balls. The goal is to finish inside a 3-foot circle." },
+        { "kicker": "The goal", "headline": "Lag it close, then tap in.", "body": "Don't chase the hole from far away. Aim for 'close', not 'in'." },
+        { "kicker": "Try it", "headline": "10 minutes before your round.", "body": "Save this for your next warm-up." }
+      ],
+      "caption": "Stop treating 30-foot putts like they have to go in. Get it close. Try this drill before your next round.",
+      "hashtags": "#golfputting #golftips #lagputting #highhandicap #golfdrill #golf #golfer"
+    },
+    {
+      "id": "09-member-of-the-month",
+      "slides": [
+        { "kicker": "The TGA Monthly", "headline": "Member of the Month", "body": "Nominations are closed. The winner has been chosen." },
+        { "kicker": "This month's winner", "headline": "The guy who shot 94", "body": "…and told everyone it was an 82." },
+        { "kicker": "Reasoning", "headline": "Mulligans: 'practice shots'.", "body": "Gimmes: 'inside the leather'. Drops: 'it was close'." },
+        { "kicker": "Prize", "headline": "A free sleeve of lost balls.", "body": "Tag your member of the month." }
+      ],
+      "caption": "We all know one. Tag your Member of the Month below.",
+      "hashtags": "#golfmemes #golfhumor #golfers #golflife #golf #golfbuddies #highhandicap"
+    },
+    {
+      "id": "10-practice-plan",
+      "slides": [
+        { "kicker": "Practice plan", "headline": "A 20-minute range routine", "body": "For people with a day job." },
+        { "kicker": "5 minutes", "headline": "Stretch and wedge shots.", "body": "Half swings. Get the tempo right first." },
+        { "kicker": "10 minutes", "headline": "The ball-flight round.", "body": "Hit a few 7-irons, a few hybrids, a few drivers. Pick a target for each shot." },
+        { "kicker": "5 minutes", "headline": "Putt to finish.", "body": "End with a few 3-footers so the last thing you do is make something." },
+        { "kicker": "Remember", "headline": "Quality beats quantity.", "body": "Save this for your next range visit." }
+      ],
+      "caption": "You don't need two hours at the range. 20 focused minutes beats a lazy bucket. Save this routine.",
+      "hashtags": "#golfpractice #golftips #rangeday #highhandicap #golfdrill #golf #golfer"
+    },
+    {
+      "id": "11-rough-rule",
+      "slides": [
+        { "kicker": "Course management", "headline": "Hitting from the rough", "body": "The simple rule." },
+        { "kicker": "Rule 1", "headline": "Take more loft.", "body": "The grass grabs the club. More loft helps the ball get out." },
+        { "kicker": "Rule 2", "headline": "Grip a little firmer.", "body": "Rough twists the face closed. Hold on." },
+        { "kicker": "Rule 3", "headline": "Expect it to fly farther.", "body": "Grass between face and ball cuts spin. That's called a flier." },
+        { "kicker": "Rule 4", "headline": "Just get back to the fairway.", "body": "Save this for your next round." }
+      ],
+      "caption": "The rough wins when you get greedy. Take your medicine and get back in play.",
+      "hashtags": "#golftips #golfrough #courseManagement #highhandicap #golfstrategy #golf #golfer"
+    },
+    {
+      "id": "12-driver-mistakes",
+      "slides": [
+        { "kicker": "Off the tee", "headline": "What high handicaps get wrong about the driver", "body": "" },
+        { "kicker": "Mistake 1", "headline": "Swinging as hard as possible.", "body": "Smooth tempo gets better contact, and contact is distance." },
+        { "kicker": "Mistake 2", "headline": "Teeing it too low.", "body": "Half the ball should sit above the top of the clubface." },
+        { "kicker": "Mistake 3", "headline": "Ball too far back.", "body": "Play it off your lead heel for a driver." },
+        { "kicker": "Bonus", "headline": "A fairway finder beats a bomb.", "body": "Send this to a playing partner." }
+      ],
+      "caption": "Hitting it 220 in the fairway beats hitting it 260 in the trees. Try these.",
+      "hashtags": "#golfdriver #golftips #highhandicap #golfdrive #golfswing #golf #golfer"
+    },
+    {
+      "id": "13-rulebook-vol2",
+      "slides": [
+        { "kicker": "The TGA Rulebook", "headline": "Volume 2", "body": "Five more rules for members." },
+        { "kicker": "Rule 6", "headline": "The ball is always 'just a little left'.", "body": "Of where it actually went." },
+        { "kicker": "Rule 7", "headline": "The best part of the round is the drive cart.", "body": "Or the post-round beer." },
+        { "kicker": "Rule 8", "headline": "Never give swing advice.", "body": "Unless asked. Or unless you're 'just curious'." },
+        { "kicker": "Rule 9", "headline": "One good shot cancels 17 bad ones.", "body": "That's the whole business model." },
+        { "kicker": "Rule 10", "headline": "Have fun. That's the only rule.", "body": "Save and share." }
+      ],
+      "caption": "The TGA Rulebook, Vol. 2. Which rule would you add?",
+      "hashtags": "#golfmemes #golfhumor #golfers #golflife #highhandicap #golf #golfrules"
+    },
+    {
+      "id": "14-range-vs-course",
+      "slides": [
+        { "kicker": "The truth", "headline": "Range vs. course", "body": "Why they feel so different." },
+        { "kicker": "At the range", "headline": "Perfect lie. No penalty. Same ball.", "body": "You hit 10 in a row and feel like a pro." },
+        { "kicker": "On the course", "headline": "Uneven lies. Nerves. One ball.", "body": "Every swing matters, so you swing differently." },
+        { "kicker": "The fix", "headline": "Practice like it's the course.", "body": "Pick a target. Switch clubs. Hit one shot at a time." },
+        { "kicker": "Save it", "headline": "The range is practice, not proof.", "body": "Send this to a friend who swears they 'hit it great on the range'." }
+      ],
+      "caption": "The range is practice, not proof. Try one-ball-at-a-time practice and see how it changes your round.",
+      "hashtags": "#golfpractice #golftips #rangeday #highhandicap #golfmindset #golf #golfer"
+    }
+  ]
+}
