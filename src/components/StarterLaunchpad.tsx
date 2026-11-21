@@ -44,7 +44,7 @@ export default function StarterLaunchpad() {
             className="text-xl sm:text-2xl font-bold"
             style={{ color: 'var(--text)', fontFamily: 'var(--font-display)' }}
           >
-            Your site is live. Now team up with your AI agent to make it yours.
+            AI Journey Speedrun
           </h2>
         </div>
 
@@ -68,53 +68,9 @@ export default function StarterLaunchpad() {
       {!collapsed && (
         <div className="mt-5">
           <p className="text-sm sm:text-base leading-relaxed mb-6" style={{ color: 'var(--muted)' }}>
-            Open this project folder in your AI coding tool (Antigravity, Cursor, Claude Code, or Codex). Copy the prompts
-            below in order: first shape your <strong style={{ color: 'var(--text)' }}>firstnamelastname.com</strong>{' '}
-            personal brand, then brainstorm a live interactive project from things you are passionate about and watch
-            your agent build it right before your eyes.
+            Open this project folder in your AI coding tool and copy the prompts in order. Keep this tab beside your
+            chat so you can try each change as you go.
           </p>
-
-          {/* 3-Step Journey Strip */}
-          <div className="grid gap-3 sm:grid-cols-3 mb-6">
-            <div
-              className="p-4 rounded-xl"
-              style={{ background: 'var(--card)', border: '1px solid var(--border)' }}
-            >
-              <div className="kicker mb-1" style={{ color: 'var(--cyan)' }}>A. Get the Site On</div>
-              <div className="text-sm font-semibold mb-1" style={{ color: 'var(--text)' }}>
-                Watch live hot-reload
-              </div>
-              <p className="text-xs leading-relaxed" style={{ color: 'var(--muted)' }}>
-                Keep this browser tab open side-by-side with your AI agent. Every change updates instantly.
-              </p>
-            </div>
-
-            <div
-              className="p-4 rounded-xl"
-              style={{ background: 'var(--card)', border: '1px solid var(--border)' }}
-            >
-              <div className="kicker mb-1" style={{ color: 'var(--cyan)' }}>B. Personal Brand</div>
-              <div className="text-sm font-semibold mb-1" style={{ color: 'var(--text)' }}>
-                Your firstnamelastname.com
-              </div>
-              <p className="text-xs leading-relaxed" style={{ color: 'var(--muted)' }}>
-                Brainstorm what you want this site to be, what content to host, and how to tell your story in your own voice.
-              </p>
-            </div>
-
-            <div
-              className="p-4 rounded-xl"
-              style={{ background: 'var(--card)', border: '1px solid var(--border)' }}
-            >
-              <div className="kicker mb-1" style={{ color: 'var(--cyan)' }}>C. The AI &ldquo;Aha!&rdquo; Moment</div>
-              <div className="text-sm font-semibold mb-1" style={{ color: 'var(--text)' }}>
-                Brainstorm &amp; co-build a tool
-              </div>
-              <p className="text-xs leading-relaxed" style={{ color: 'var(--muted)' }}>
-                Pick a hobby or obsession, brainstorm an interactive tool with your agent, and host it live on your site.
-              </p>
-            </div>
-          </div>
 
           {/* Copyable Prompts */}
           <div className="grid gap-4 lg:grid-cols-2 mb-6">

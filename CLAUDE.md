@@ -1,34 +1,28 @@
-# Personal Brand & AI Builder Playbook
+# AI Journey Speedrun
 
-Use this workflow in Antigravity, Cursor, Claude Code, or Codex. The goal is to have the owner see their story take shape, then turn something they already enjoy into software someone else can use. Ask two or three questions at a time and edit live as decisions land.
+Guide the owner through these five steps in order. Ask two or three questions at a time and show changes live as decisions land.
 
-## 1. Get the site on screen
+## 1. Boot & Personal Brand
 
-1. Check for Node 22. Run `npm install` if dependencies are missing.
-2. Start `npm run dev` and verify that `http://localhost:5173` responds. If the port is busy, identify what is serving it and share the actual preview URL.
-3. Invite the owner to keep the browser beside the chat. Open `/work/passion-project-lab`, try a control together, and show a visible edit hot-reloading.
+Use Node 22, run `npm install` if needed, and start `npm run dev`. Verify [localhost:5173](http://localhost:5173) and share the actual preview URL. Open `/work/passion-project-lab` and show one visible edit hot-reloading.
 
-## 2. Shape the personal brand
+Ask who the owner wants to reach, what they want visitors to remember, and which story makes that credible. Choose three content pillars with real examples and capture their current focus in Now. Shape the `firstnamelastname.com` brand in their voice. Update `src/content/profile.ts`, the title and share metadata in `index.html`, and the favicon as decisions land. Review Home and About together.
 
-Start with who should land on the site, what they should remember, and which story or project makes that impression credible. Then ask what the owner wants to keep sharing and what has their attention right now.
+## 2. Passion-Project Questionnaire
 
-Draft three distinct pillars, each backed by a real example. A pillar could be a craft, a recurring question, or something the owner is building. Use their words for the tagline and About story. Add two to four current items in Now and confirm any location and links before displaying them.
+Ask what the owner genuinely cares about outside work, what they track or compare, and what they keep doing by hand. Pitch exactly three concrete projects to seed the site. For each, describe the visitor, one action, the immediate result, and the smallest working version. Let the owner pick one.
 
-Update `src/content/profile.ts`, the title and share metadata in `index.html`, and `public/favicon.svg`. Open Home and About with the owner and refine one line together.
+## 3. Install Your Lightweight SDLC & Skills Skillset BEFORE Building
 
-## 3. Find three buildable ideas
+Set up a lightweight software development lifecycle (SDLC) and reusable agent skills before writing app code. Add a small glossary where project notes already live. Use a short architecture decision record (ADR) for each consequential choice, capturing the decision and why it was made. Give the agent only the goal, files, and constraints it needs for the current slice. Agree on a short checklist for verifying each change before shipping. Fit these habits into the existing repo layout and preserve working behavior.
 
-Ask what the owner spends time on outside work, what they repeatedly track or compare, and what they wish a friend could try in a browser. Build on a specific answer, such as “I rescale recipes every weekend.”
+## 4. Accounts, Co-Build & Ship
 
-Pitch **exactly three** ideas. For each, give it a name, say who it helps, describe one input and visible result, and define the smallest thing you could demo together. For a cook, that could be a recipe scaler that recalculates quantities, a prep timer that works backward from dinner, or a pantry picker that filters a sample recipe list.
+- **Confirm accounts.** Check that the owner has GitHub and free [Vercel Hobby](https://vercel.com/docs/plans/hobby) hosting for their personal site.
+- **Align and pick a small slice.** Agree on one visitor goal and one complete input-to-result flow. Use only publishable content and sample data. Keep secrets out of the repo and browser bundle.
+- **Build and verify.** Put the React tool in `src/lab/`, register it in `src/lab/registry.tsx`, and match the `interactiveId` in `src/content/projects.ts`. Open `/work/<slug>` and check a normal example, empty or boundary input, and keyboard and mobile use. Let the owner try it and refine it together. Run `npm run build`.
+- **Ship.** Clear placeholders, check links and metadata, and set `starterMode: false` when onboarding is finished. Verify direct project URLs locally. With the owner’s go-ahead, connect the GitHub repo to Vercel and verify a hosted preview, including a direct-link refresh. Ask an independent reviewer from another model family to check the release evidence before promotion. With publishing approval, publish and check the public URL. Get the owner’s go-ahead before connecting a domain.
 
-Let the owner choose. Use [Real-World Inspiration](README.md#real-world-inspiration) if they want to see how a narrow interest can make a good site.
+## 5. Level Up Your Ecosystem
 
-## 4. Co-build and ship one app
-
-- **Align.** Agree on who uses it, what they do, and what result proves it works.
-- **Small slice.** Pick one complete input-to-result flow and a representative example. Use local state and public or sample data. Save extras for the next pass.
-- **Build and verify.** Put the component in `src/lab/`, register it in `src/lab/registry.tsx`, and give its `src/content/projects.ts` entry the same `interactiveId`. Open `/work/<slug>` and test a normal example, an empty or boundary input, and keyboard and mobile use. Let the owner try it, make one refinement from their feedback, and run `npm run build`.
-- **Ship.** Replace demo content the owner won’t keep, check links and metadata, and set `starterMode: false` once onboarding is finished. Preview `dist/` and verify direct project URLs. Before promotion, ask an independent reviewer from another model family to check the release evidence. With publishing approval, promote a passing static-host preview and check the public URL. Roll back by restoring the last good deployment.
-
-Keep profile and project data in `src/content/` and tools in `src/lab/`. The browser bundle is public, so use only publishable data and keep secrets out of the repository.
+Graduate to Compound AI. Write a clean standard operating procedure (SOP) for one repeatable task, keep reusable notes and decisions in a digital brain, and trim each agent prompt to the context it needs to save tokens. Follow [Magpie](https://www.cameronsutcliff.com/magpie) for automatic updates on AI breakthroughs and security safeguards.

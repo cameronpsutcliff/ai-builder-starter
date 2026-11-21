@@ -1,27 +1,27 @@
-# AI Builder Prompt Playbook
+# AI Journey Speedrun Prompts
 
-Paste these prompts into Antigravity, Cursor, Claude Code, or Codex with this folder open. Start with the kickoff or pick up at the stage you need.
+Paste these prompts into Antigravity, Cursor, Claude Code, or Codex with this folder open. Start with the kickoff or pick up at the step you need.
 
 ## Kickoff
 
-> Read AGENTS.md and CLAUDE.md. Boot the local site and give me the preview URL. Ask me two or three questions at a time to shape my brand, then update the site while I watch. Next, interview me about my real-life passions and pitch three concrete interactive projects. Let me pick, then co-build and verify the smallest working version with me. Help me get it ready to publish.
+> Read AGENTS.md and CLAUDE.md and guide me through the AI Journey Speedrun in order. Boot my site and shape my personal brand, interview me and pitch three passion projects, set up lightweight engineering skills before building, confirm GitHub and free Vercel hosting and co-build the project I choose, then help me level up with Compound AI and Magpie. Ask for my go-ahead before any deployment or domain change.
 
-## 1. Put the site on screen
+## 1. Boot & Personal Brand
 
-> Use Node 22, install dependencies if needed, start the dev server, and verify localhost:5173. Show me the home page and the starter lab at /work/passion-project-lab. Make one visible edit so I can see hot reload.
+> Use Node 22, run npm install if needed, and start npm run dev. Verify http://localhost:5173, show me the starter lab at /work/passion-project-lab, and make one edit I can see hot-reload. Ask two or three questions at a time about my audience, story, three content pillars, and current focus. Shape my firstnamelastname.com brand in my voice and update src/content/profile.ts, index.html, and the favicon as we go.
 
-## 2. Find my story and pillars
+## 2. Passion-Project Questionnaire
 
-> Ask who I want to reach, what they should remember, and what work or life story makes that credible. Help me choose three distinct content pillars and write a short Now section. Update src/content/profile.ts, index.html, and the favicon as we agree on changes. Show me Home and About so I can react to the copy.
+> Ask what I love doing outside work, what I track or compare, and what I keep doing by hand. Pitch exactly three concrete interactive projects to seed my site. For each, name the visitor, what they do, the immediate result, and the smallest version we can build. Let me choose one.
 
-## 3. Turn my interests into three ideas
+## 3. Install Your Lightweight SDLC & Skills Skillset BEFORE Building
 
-> Ask what I do for fun, what I track or compare, and what I keep doing by hand. Use my answers to pitch exactly three mini-apps. For each, describe the visitor, what they do, what happens on screen, and the smallest working version we can build. Let me choose one.
+> Before building the app, help me set up a lightweight software development workflow and reusable agent skills. Add a small glossary, use short architecture decision records (ADRs) to capture decisions and why we made them, give the agent only the context it needs for each small slice, and agree on a verify-before-shipping checklist. Use the existing repo layout and preserve what already works.
 
-## 4. Co-build and prepare to ship
+## 4. Accounts, Co-Build & Ship
 
-> Align with me on one visitor goal and the smallest feature that serves it. Build it in src/lab/, register it in src/lab/registry.tsx, and add a project with the matching interactiveId. Open /work/<slug> and give me an example to try. Check empty and edge inputs, make one improvement from my feedback, and run npm run build. Help me clear placeholders, turn off Starter Mode, and verify a preview before I approve publishing.
+> Confirm I have GitHub and Vercel Hobby accounts. Agree on one visitor goal and the smallest useful version. Build it in src/lab/, register it in src/lab/registry.tsx, and match its interactiveId in src/content/projects.ts. Test the project page with me, check empty and edge inputs, and refine it from feedback. Clear placeholders, turn off Starter Mode when ready, and run npm run build. With my go-ahead, connect GitHub to Vercel, verify a hosted preview including a direct project URL, then publish and check the live URL.
 
-Try feedback like “Add one preset so I can try it instantly” or “Show me what changes when I move the slider.”
+## 5. Level Up Your Ecosystem
 
-For examples of what people publish, see [Real-World Inspiration](README.md#real-world-inspiration).
+> Help me take the next step into Compound AI. Turn one repeatable task into a clean standard operating procedure (SOP), capture reusable decisions and notes in a digital brain, and trim prompts to the context each task needs so I spend fewer tokens. Point me to https://www.cameronsutcliff.com/magpie so I can follow Magpie for automatic updates on AI breakthroughs and security safeguards.

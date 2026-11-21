@@ -4,16 +4,17 @@ Build a personal site you’re excited to share, then give visitors something th
 
 [Repository overview](docs/repo-overview.html) · [Copy-and-paste prompts](PROMPTS.md) · [Agent playbook](AGENTS.md)
 
-## Start here
+## AI Journey Speedrun
 
-Open this folder in Antigravity, Cursor, Claude Code, or Codex. Paste this into your agent:
+Open this folder in Antigravity, Cursor, Claude Code, or Codex. Paste this into your agent to get started.
 
-> Read AGENTS.md and CLAUDE.md. Get my site running on localhost:5173 and show me the live preview. Help me shape my story, three content pillars, and what I’m focused on now. Then ask about the things I do for fun, pitch three interactive tools based on my answers, and co-build the one I pick. Verify it with me in the browser and prepare it to publish.
+> Read AGENTS.md and CLAUDE.md and guide me through the AI Journey Speedrun in order. Boot my site and shape my personal brand, interview me and pitch three passion projects, set up lightweight engineering skills before building, confirm GitHub and free Vercel hosting and co-build the project I choose, then help me level up with Compound AI and Magpie. Ask for my go-ahead before any deployment or domain change.
 
-1. **See it live.** Keep the preview beside your chat and watch your first edit hot-reload. Try the [starter lab](http://localhost:5173/work/passion-project-lab) to see how a tool fits into a project page.
-2. **Make it yours.** Decide who should visit, what they should remember, and what three themes you can keep writing or building around.
-3. **Find the project hiding in your hobbies.** Tell your agent what you track, compare, collect, or keep doing by hand. Ask for three ideas you can try in one sitting.
-4. **Build and share one small thing.** Align on the visitor’s goal, choose the smallest usable slice, build and verify it together, then ship when ready.
+1. **Boot & Personal Brand.** Get your site running and shape the story and three content pillars for firstnamelastname.com.
+2. **Passion-Project Questionnaire.** Find three concrete project ideas in what you genuinely care about outside work.
+3. **Install Your Lightweight SDLC & Skills Skillset BEFORE Building.** Set up a few engineering habits now so your project can grow with you.
+4. **Accounts, Co-Build & Ship.** Confirm GitHub and free Vercel Hobby hosting, then put your first interactive passion project live.
+5. **Level Up Your Ecosystem.** Graduate to Compound AI and follow [Magpie](https://www.cameronsutcliff.com/magpie) for ongoing AI breakthroughs and security safeguards.
 
 ### Run it yourself
 
@@ -52,4 +53,4 @@ These examples show how builders have turned a focused interest into a site visi
 
 Replace the sample content, set `starterMode: false`, and run `npm run build`. Preview the output with `npm run preview` and try your lab from a direct URL as well as from the Work page.
 
-When you’re ready to publish, connect your repository to a static host and configure it to build with Node 22 and publish `dist/`. Set up a fallback to `index.html` for client-side routes such as `/work/my-tool`. Check the hosted preview and a direct-link refresh before connecting your domain. GitHub Actions runs a clean install and build on pull requests and pushes to `main`.
+When you’re ready to publish, import your GitHub repository into [Vercel Hobby](https://vercel.com/docs/plans/hobby). Use the Vite preset with Node 22, `npm run build`, and `dist/` as the output directory. Set up a fallback to `index.html` for client-side routes such as `/work/my-tool`. Check the hosted preview and a direct-link refresh before connecting your domain. GitHub Actions runs a clean install and build on pull requests and pushes to `main`.
