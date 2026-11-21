@@ -24,7 +24,7 @@ export const profile = {
   // Shown big on the home page and in the browser tab.
   name: 'Your Name',
 
-  // Your personal domain or handle (e.g. "joshsutcliff.com").
+  // Your personal domain or handle (e.g. "firstnamelastname.com").
   // Shown as a subtle label on the home hero. Leave empty ('') to hide.
   domain: 'firstnamelastname.com',
 

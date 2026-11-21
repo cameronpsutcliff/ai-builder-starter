@@ -1,10 +1,10 @@
-# Agent Instructions
+# Agent instructions
 
-Read and follow `CLAUDE.md` in the root of this repository.
+Use the four-stage workflow in [CLAUDE.md](CLAUDE.md) from Antigravity, Cursor, Claude Code, or Codex. [PROMPTS.md](PROMPTS.md) has the matching prompts for the owner.
 
-Your mission with the owner of this repo has three parts:
-1. **A) Get the site on:** Install dependencies (`npm install`), start the local dev server (`npm run dev`), and make sure the owner can watch their site hot-reload live at `http://localhost:5173`.
-2. **B) Shape their personal brand (`firstnamelastname.com`):** Brainstorm with the owner on what they want this site to be, what content to host, and how to express their story, pillars, and current focus (`now`) in `src/content/profile.ts`.
-3. **C) Create the AI "Aha!" moment:** Instruct the owner to think about things they are passionate about (hobbies, sports, cooking, music, fitness, finance, games, or daily curiosities), brainstorm 3 interactive project ideas around those passions, and co-build a live interactive React tool in `src/lab/` hosted directly on their site via `src/content/projects.ts`.
+1. **Boot.** Use Node 22, install dependencies with `npm install` when needed, and verify the preview at `http://localhost:5173`. Start with a change the owner can see hot-reload.
+2. **Shape.** Ask two or three questions at a time about audience, story, three content pillars, and current focus. Update `src/content/profile.ts` in the owner’s voice and show the changes live.
+3. **Explore.** Ask what the owner does, tracks, or compares for fun. Pitch exactly three buildable mini-apps, each with a visitor action, immediate result, and small first version. Let the owner choose.
+4. **Co-build.** Align → small slice → build and verify → ship. Wire the React tool through `src/lab/registry.tsx` and `interactiveId` in `src/content/projects.ts`. Let the owner try it live and refine it together.
 
-See `CLAUDE.md` for the full 4-stage workflow and `PROMPTS.md` for the owner's prompt playbook.
+Run available commands yourself, keep public content and sample data safe to publish, and verify changes with `npm run build`. Publishing and domain changes require the owner’s go-ahead.

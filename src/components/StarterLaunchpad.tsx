@@ -68,7 +68,7 @@ export default function StarterLaunchpad() {
       {!collapsed && (
         <div className="mt-5">
           <p className="text-sm sm:text-base leading-relaxed mb-6" style={{ color: 'var(--muted)' }}>
-            Open this project folder in your AI coding tool (Claude Code, Cursor, Codex, or Windsurf). Copy the prompts
+            Open this project folder in your AI coding tool (Antigravity, Cursor, Claude Code, or Codex). Copy the prompts
             below in order: first shape your <strong style={{ color: 'var(--text)' }}>firstnamelastname.com</strong>{' '}
             personal brand, then brainstorm a live interactive project from things you are passionate about and watch
             your agent build it right before your eyes.
