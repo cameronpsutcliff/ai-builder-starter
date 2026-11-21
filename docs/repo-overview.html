@@ -87,7 +87,7 @@
   <header>
     <h1>Personal Brand &amp; AI Builder Starter</h1>
     <p>A browser-first portfolio with an interactive lab and a guided path from idea to deployment.</p>
-    <a href="https://github.com/cameronpsutcliff/josh-portfolio-starter/blob/main/README.md">Repository README</a>
+    <a href="https://github.com/cameronpsutcliff/ai-builder-starter/blob/main/README.md">Repository README</a>
   </header>
 
   <section id="purpose">
@@ -132,14 +132,14 @@
         </svg>
       </div>
     </figure>
-    <p>Vite bundles React routes and the local Abyssal theme package. The site requests Google Fonts and can link to owner-selected destinations. <a href="https://github.com/cameronpsutcliff/josh-portfolio-starter/blob/main/src/App.tsx">Route map</a></p>
+    <p>Vite bundles React routes and the local Abyssal theme package. The site requests Google Fonts and can link to owner-selected destinations. <a href="https://github.com/cameronpsutcliff/ai-builder-starter/blob/main/src/App.tsx">Route map</a></p>
   </section>
 
   <section id="environments">
     <h2>Environments, Scale &amp; Cost Controls</h2>
     <dl>
       <dt>Local</dt><dd><code>npm run dev</code> serves a hot-reloading preview on port 5173 by default.</dd>
-      <dt>CI</dt><dd>Node 22 checks pull requests and pushes to main with a clean install and build. <a href="https://github.com/cameronpsutcliff/josh-portfolio-starter/blob/main/.github/workflows/ci.yml">Build workflow</a></dd>
+      <dt>CI</dt><dd>Node 22 checks pull requests and pushes to main with a clean install and build. <a href="https://github.com/cameronpsutcliff/ai-builder-starter/blob/main/.github/workflows/ci.yml">Build workflow</a></dd>
       <dt>UAT and production</dt><dd>Use a static-host preview for acceptance and promote it to the owner’s domain. Hosting is configured per copy.</dd>
       <dt>Volume and spend</dt><dd>Release on demand. Static requests use host bandwidth and lab computation runs in the browser.</dd>
       <dt>Token use</dt><dd>The starter makes zero model calls. Owners manage AI usage in their chosen coding agent.</dd>
@@ -150,9 +150,9 @@
     <h2>Data Contracts, Auth &amp; Dependencies</h2>
     <ul>
       <li>Vite emits static HTML, scripts, and assets in <code>dist/</code>. There is no service API.</li>
-      <li>Every project needs a unique slug. Its optional <code>interactiveId</code> must match a registry key to display a tool. <a href="https://github.com/cameronpsutcliff/josh-portfolio-starter/blob/main/src/content/projects.ts">Project schema</a></li>
+      <li>Every project needs a unique slug. Its optional <code>interactiveId</code> must match a registry key to display a tool. <a href="https://github.com/cameronpsutcliff/ai-builder-starter/blob/main/src/content/projects.ts">Project schema</a></li>
       <li>The site has no sign-in or server-side secrets. All browser assets are public.</li>
-      <li>Node, the committed lockfile, and the in-repo theme package cover build dependencies. No private laptop paths are required. <a href="https://github.com/cameronpsutcliff/josh-portfolio-starter/blob/main/package.json">Package manifest</a></li>
+      <li>Node, the committed lockfile, and the in-repo theme package cover build dependencies. No private laptop paths are required. <a href="https://github.com/cameronpsutcliff/ai-builder-starter/blob/main/package.json">Package manifest</a></li>
     </ul>
   </section>
 
@@ -164,7 +164,7 @@
       <li><strong>Build and verify.</strong> Run <code>npm run build</code> and smoke-test the project URL. Baseline automated test count is zero. CI checks install, types, and bundling. An independent reviewer from another model family checks the release evidence before promotion.</li>
       <li><strong>Ship.</strong> Merge a passing change, verify the static-host preview, then promote with owner approval. Roll back by restoring the last good deployment.</li>
     </ol>
-    <p>The repository defines the build check. Branch protection and deployment automation are configured by the owner. <a href="https://github.com/cameronpsutcliff/josh-portfolio-starter/blob/main/CLAUDE.md">SDLC playbook</a></p>
+    <p>The repository defines the build check. Branch protection and deployment automation are configured by the owner. <a href="https://github.com/cameronpsutcliff/ai-builder-starter/blob/main/CLAUDE.md">SDLC playbook</a></p>
   </section>
 
   <section id="decisions">
@@ -173,7 +173,7 @@
       <li>React and TypeScript fit small interactive tools with typed profile and project data.</li>
       <li>Vite provides hot reload for co-building and a static output for simple hosting.</li>
       <li>The component registry lets each project opt into a lab while keeping metadata as plain data.</li>
-      <li>These decisions live in the agent playbook. The repository currently has zero formal ADRs. <a href="https://github.com/cameronpsutcliff/josh-portfolio-starter/blob/main/CLAUDE.md">Agent playbook</a></li>
+      <li>These decisions live in the agent playbook. The repository currently has zero formal ADRs. <a href="https://github.com/cameronpsutcliff/ai-builder-starter/blob/main/CLAUDE.md">Agent playbook</a></li>
     </ul>
   </section>
 
@@ -195,11 +195,11 @@
       <dt>Slug</dt><dd>The unique URL segment for a project under <code>/work/</code>.</dd>
     </dl>
     <ol>
-      <li><a href="https://github.com/cameronpsutcliff/josh-portfolio-starter/blob/main/README.md">README.md</a> explains how to run and publish the starter.</li>
-      <li><a href="https://github.com/cameronpsutcliff/josh-portfolio-starter/blob/main/CLAUDE.md">CLAUDE.md</a> guides the four-stage owner session.</li>
-      <li><a href="https://github.com/cameronpsutcliff/josh-portfolio-starter/blob/main/src/content/profile.ts">profile.ts</a> defines identity, pillars, and Now.</li>
-      <li><a href="https://github.com/cameronpsutcliff/josh-portfolio-starter/blob/main/src/content/projects.ts">projects.ts</a> defines project routes and lab IDs.</li>
-      <li><a href="https://github.com/cameronpsutcliff/josh-portfolio-starter/blob/main/src/lab/registry.tsx">registry.tsx</a> connects lab IDs to components.</li>
+      <li><a href="https://github.com/cameronpsutcliff/ai-builder-starter/blob/main/README.md">README.md</a> explains how to run and publish the starter.</li>
+      <li><a href="https://github.com/cameronpsutcliff/ai-builder-starter/blob/main/CLAUDE.md">CLAUDE.md</a> guides the four-stage owner session.</li>
+      <li><a href="https://github.com/cameronpsutcliff/ai-builder-starter/blob/main/src/content/profile.ts">profile.ts</a> defines identity, pillars, and Now.</li>
+      <li><a href="https://github.com/cameronpsutcliff/ai-builder-starter/blob/main/src/content/projects.ts">projects.ts</a> defines project routes and lab IDs.</li>
+      <li><a href="https://github.com/cameronpsutcliff/ai-builder-starter/blob/main/src/lab/registry.tsx">registry.tsx</a> connects lab IDs to components.</li>
     </ol>
   </section>
 </main>
