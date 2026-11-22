@@ -1,14 +1,14 @@
-// Renders every post in content.json into 1080x1350 PNG carousel slides.
+// Renders every post in content.json into 1080x1350 JPEG carousel slides
+// (Instagram's publishing API only accepts JPEG).
 // Usage: node tga/render.mjs [post-id]   (omit id to render everything)
-import { createRequire } from 'node:module'
-import { readFileSync, mkdirSync, writeFileSync } from 'node:fs'
+import { chromium } from 'playwright'
+import { readFileSync, mkdirSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-const { chromium } = createRequire(import.meta.url)('playwright')
 const here = dirname(fileURLToPath(import.meta.url))
 const { handle, posts } = JSON.parse(readFileSync(join(here, 'content.json'), 'utf8'))
-const outRoot = join(here, 'out')
+const outRoot = join(here, 'media')
 const only = process.argv[2]
 
 const font = (file) =>
@@ -50,9 +50,11 @@ ${slide.body ? `<p class="body">${esc(slide.body)}</p>` : ''}
 </div></body></html>`
 }
 
-const browser = await chromium.launch()
+// PLAYWRIGHT_CHROMIUM_PATH lets you point at an already-installed Chromium.
+const browser = await chromium.launch({
+  executablePath: process.env.PLAYWRIGHT_CHROMIUM_PATH || undefined,
+})
 const page = await browser.newPage({ viewport: { width: 1080, height: 1350 } })
-const queue = []
 
 for (const post of posts) {
   if (only && post.id !== only) continue
@@ -61,24 +63,13 @@ for (const post of posts) {
   for (let i = 0; i < post.slides.length; i++) {
     await page.setContent(slideHtml(post.slides[i], i, post.slides.length))
     await page.evaluate(() => document.fonts.ready)
-    await page.screenshot({ path: join(dir, `slide-${i + 1}.png`) })
+    await page.screenshot({
+      path: join(dir, `slide-${i + 1}.jpg`),
+      type: 'jpeg',
+      quality: 92,
+    })
   }
-  writeFileSync(join(dir, 'caption.txt'), `${post.caption}\n\n${post.hashtags}\n`)
-  queue.push(post)
   console.log(`rendered ${post.id} (${post.slides.length} slides)`)
 }
-
-// Posting schedule: one post per day starting tomorrow.
-const start = new Date()
-start.setDate(start.getDate() + 1)
-const rows = queue.map((p, i) => {
-  const d = new Date(start)
-  d.setDate(start.getDate() + i)
-  return `| ${d.toISOString().slice(0, 10)} | ${p.id} | ${p.slides.length} |`
-})
-writeFileSync(
-  join(outRoot, 'schedule.md'),
-  `# Posting schedule\n\n| Date | Post | Slides |\n|---|---|---|\n${rows.join('\n')}\n`,
-)
 
 await browser.close()
