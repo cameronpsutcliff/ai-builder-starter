@@ -48,9 +48,12 @@ These examples show how builders have turned a focused interest into a site visi
 | `src/lab/` | Interactive React tools and the registry connecting them to project pages |
 | `src/content/prompts.ts` | Copyable prompts in the on-site Starter Launchpad |
 | `index.html` and `public/favicon.svg` | Browser title, share metadata, and tab icon |
+| `vercel.json` | SPA fallback rewrite to `index.html` and immutable caching for `/assets/*` |
 
 ## Publish your site
 
-Replace the sample content, set `starterMode: false`, and run `npm run build`. Preview the output with `npm run preview` and try your lab from a direct URL as well as from the Work page.
+Replace the sample content, set `starterMode: false`, and run `npm run lint && npm run build`. Preview the output with `npm run preview` and try your lab from a direct URL as well as from the Work page.
 
-When you’re ready to publish, import your GitHub repository into [Vercel Hobby](https://vercel.com/docs/plans/hobby). Use the Vite preset with Node 22, `npm run build`, and `dist/` as the output directory. Set up a fallback to `index.html` for client-side routes such as `/work/my-tool`. Check the hosted preview and a direct-link refresh before connecting your domain. GitHub Actions runs a clean install and build on pull requests and pushes to `main`.
+When you’re ready to publish, import your GitHub repository into [Vercel Hobby](https://vercel.com/docs/plans/hobby). Use the Vite preset with Node 22, `npm run build`, and `dist/` as the output directory. The included `vercel.json` handles client-side route fallbacks (such as `/work/my-tool`) and asset cache headers out of the box. Check the hosted preview and a direct-link refresh before connecting your domain. GitHub Actions runs a clean install, lint, and build on pull requests and pushes to `main`.
+
+Once your custom domain is live, placing Cloudflare’s free proxy (DNS proxied, Bot Fight Mode, and edge cache rules) in front of Vercel shields your Hobby 1M/month request quota from automated bot crawlers.

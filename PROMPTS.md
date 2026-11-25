@@ -16,12 +16,12 @@ Paste these prompts into Antigravity, Cursor, Claude Code, or Codex with this fo
 
 ## 3. Install Your Lightweight SDLC & Skills Skillset BEFORE Building
 
-> Before building the app, help me set up a lightweight software development workflow and reusable agent skills. Add a small glossary, use short architecture decision records (ADRs) to capture decisions and why we made them, give the agent only the context it needs for each small slice, and agree on a verify-before-shipping checklist. Use the existing repo layout and preserve what already works.
+> Before building the app, help me set up a lightweight software development workflow and reusable agent skills. Add a small glossary, use short architecture decision records (ADRs) to capture decisions and why we made them, give the agent only the context it needs for each small slice, turn repeated mistakes into lint rules or tests instead of adding more prose, and agree on a verify-before-shipping checklist that checks rendered UI in a real browser. Use the existing repo layout and preserve what already works.
 
 ## 4. Accounts, Co-Build & Ship
 
-> Confirm I have GitHub and Vercel Hobby accounts. Agree on one visitor goal and the smallest useful version. Build it in src/lab/, register it in src/lab/registry.tsx, and match its interactiveId in src/content/projects.ts. Test the project page with me, check empty and edge inputs, and refine it from feedback. Clear placeholders, turn off Starter Mode when ready, and run npm run build. With my go-ahead, connect GitHub to Vercel, verify a hosted preview including a direct project URL, then publish and check the live URL.
+> Confirm I have GitHub and Vercel Hobby accounts. Agree on one visitor goal and the smallest useful version. Build it in src/lab/, register it in src/lab/registry.tsx, and match its interactiveId in src/content/projects.ts. Test the project page with me, check empty and edge inputs, and refine it from feedback. Clear placeholders, turn off Starter Mode when ready, and run npm run lint && npm run build. With my go-ahead, connect GitHub to Vercel, verify a hosted preview including a direct project URL, then publish and check the live URL.
 
 ## 5. Level Up Your Ecosystem
 
-> Help me take the next step into Compound AI. Turn one repeatable task into a clean standard operating procedure (SOP), capture reusable decisions and notes in a digital brain, and trim prompts to the context each task needs so I spend fewer tokens. Point me to https://www.cameronsutcliff.com/magpie so I can follow Magpie for automatic updates on AI breakthroughs and security safeguards.
+> Help me take the next step into Compound AI. Turn one repeatable task into a clean standard operating procedure (SOP), capture reusable decisions and notes in a digital brain, trim prompts to the context each task needs, and explore runtime UI property testing (such as Playwright or Bombadil) as my app matures. Point me to https://www.cameronsutcliff.com/magpie (where I can press / to search models, labs, repos, and ideas) for automatic updates on AI breakthroughs and security safeguards.

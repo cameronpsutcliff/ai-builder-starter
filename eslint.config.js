@@ -20,4 +20,21 @@ export default defineConfig([
       globals: globals.browser,
     },
   },
+  {
+    // Unidirectional layer guard: keep content modules pure data independent of pages, UI, and lab tools.
+    files: ['src/content/**/*.{ts,tsx}'],
+    rules: {
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: [
+            {
+              group: ['../pages/**', '../components/**', '../lab/**', '@/pages/**', '@/components/**', '@/lab/**'],
+              message: 'src/content modules must stay pure data independent of pages, components, and lab tools.',
+            },
+          ],
+        },
+      ],
+    },
+  },
 ])

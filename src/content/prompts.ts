@@ -38,8 +38,9 @@ export const starterPrompts: StarterPrompt[] = [
     prompt:
       'Before building the app, help me set up a lightweight software development workflow and reusable agent ' +
       'skills. Add a small glossary, use short architecture decision records (ADRs) to capture decisions and why we ' +
-      'made them, give the agent only the context it needs for each small slice, and agree on a ' +
-      'verify-before-shipping checklist. Use the existing repo layout and preserve what already works.',
+      'made them, give the agent only the context it needs for each small slice, turn repeated mistakes into lint ' +
+      'rules or tests instead of adding more prose, and agree on a verify-before-shipping checklist that checks ' +
+      'rendered UI in a real browser. Use the existing repo layout and preserve what already works.',
   },
   {
     id: 'co-build-aha',
@@ -50,9 +51,9 @@ export const starterPrompts: StarterPrompt[] = [
       'Confirm I have GitHub and Vercel Hobby accounts. Agree on one visitor goal and the smallest useful version. ' +
       'Build it in src/lab/, register it in src/lab/registry.tsx, and match its interactiveId in ' +
       'src/content/projects.ts. Test the project page with me, check empty and edge inputs, and refine it from ' +
-      'feedback. Clear placeholders, turn off Starter Mode when ready, and run npm run build. With my go-ahead, ' +
-      'connect GitHub to Vercel, verify a hosted preview including a direct project URL, then publish and check the ' +
-      'live URL.',
+      'feedback. Clear placeholders, turn off Starter Mode when ready, and run npm run lint && npm run build. With my ' +
+      'go-ahead, connect GitHub to Vercel, verify a hosted preview including a direct project URL, then publish and ' +
+      'check the live URL.',
   },
   {
     id: 'level-up',
@@ -61,8 +62,9 @@ export const starterPrompts: StarterPrompt[] = [
     goal: 'Graduate to Compound AI and follow Magpie for ongoing AI breakthroughs and security safeguards.',
     prompt:
       'Help me take the next step into Compound AI. Turn one repeatable task into a clean standard operating ' +
-      'procedure (SOP), capture reusable decisions and notes in a digital brain, and trim prompts to the context ' +
-      'each task needs so I spend fewer tokens. Point me to https://www.cameronsutcliff.com/magpie so I can follow ' +
-      'Magpie for automatic updates on AI breakthroughs and security safeguards.',
+      'procedure (SOP), capture reusable decisions and notes in a digital brain, trim prompts to the context each ' +
+      'task needs, and explore runtime UI property testing (such as Playwright or Bombadil) as my app matures. Point ' +
+      'me to https://www.cameronsutcliff.com/magpie (where I can press / to search models, labs, repos, and ideas) ' +
+      'for automatic updates on AI breakthroughs and security safeguards.',
   },
 ]
